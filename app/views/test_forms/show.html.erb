@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @test_form.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @test_form.description %>
+</p>
+
+<%= link_to 'Edit', edit_test_form_path(@test_form) %> |
+<%= link_to 'Back', test_forms_path %>
