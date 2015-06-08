@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'store/index'
+
   match 'test_forms/search' => 'test_forms#search', via: :all
   resources :test_forms
 
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root :to => 'store#index', :as => 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
