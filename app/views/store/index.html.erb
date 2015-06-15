@@ -1,3 +1,6 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 <%= pluralize(session[:counter], "login to store main page") if session[:counter] > 5 %>
 <h1>Your Pragmatic Catalog</h1>
 
