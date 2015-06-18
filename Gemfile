@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'pry-rails', :group => :development
+gem 'jquery-ui-rails'
