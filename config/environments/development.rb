@@ -34,4 +34,17 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  #email config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.163.com',
+    :port => 25,
+    :domain => 'email.163.com',
+    :authentication => :login,
+    :user_name => 'ymg_best@163.com',
+    :password => 'yang85916203',
+    :enable_starttls_auto => true
+  }
+
 end
