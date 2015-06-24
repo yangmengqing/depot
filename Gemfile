@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 
 gem 'pry-rails', :group => :development
 gem 'jquery-ui-rails'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
