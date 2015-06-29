@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  #get 'admin/index'
-
-  #get 'sessions/new'
-
-  #get 'sessions/create'
-
-  #get 'sessions/destroy'
-
   get 'admin' => 'admin#index'
 
   controller :sessions do
@@ -15,30 +7,28 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  resources :users
-
-  resources :orders
-
-  resources :line_items
-  resources :carts
-
-  get 'store/index'
-  
-  resources :products do
-    get :who_bought, :on => :member
+  scope'(:locale)' do
+    resources :users
+    resources :orders
+    resources :line_items
+    resources :carts
+    resources :products do
+      get :who_bought, :on => :member
+    end
+    root :to => 'store#index', :as => 'store'
   end
 
   match 'test_forms/search' => 'test_forms#search', via: :all
   resources :test_forms
 
 
-  resources :products
+  #resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root :to => 'store#index', :as => 'store'
+   #root :to => 'store#index', :as => 'store'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
