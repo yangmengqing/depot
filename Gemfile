@@ -47,3 +47,5 @@ gem 'will_paginate-bootstrap'
 group :production do
   gem 'mysql'
 end
+
+gem 'capistrano'
