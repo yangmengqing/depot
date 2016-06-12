@@ -1,0 +1,2 @@
+class TestBranchController < ApplicationController
+end
